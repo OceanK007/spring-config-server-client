@@ -1,0 +1,1 @@
+# Note that this file must be "bootstrap" -- not "application" -- so that it is read early in the application startup process. The server.port could be specified in either file, but the URI to the config server affects the startup sequence.

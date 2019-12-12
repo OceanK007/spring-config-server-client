@@ -1,0 +1,25 @@
+# Properties active for ALL profiles:
+---
+# This 'name' of our application is important 
+# as the config server typically has to serve up properties for many applications:
+spring:
+  application:
+    name: server-config-data			# name must be same like .yml/.properties file name
+  
+  profiles:
+    active: northamerica					# will refer server-config-data-northamerica.yml file
+    
+  cloud:
+    config:
+      uri: http://localhost:8001		# Where should we call the config server at?
+    
+server:
+  port: 8002							# What port should we expose for our web interface
+
+
+# Uncomment these lines to activate "northamerica" as the active profile.
+# Ordinarily we would not activate a profile from within a property file, but this is just a demo:
+#---
+#spring:
+#  profiles:
+#    active: northamerica
